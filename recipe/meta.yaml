@@ -11,8 +11,8 @@ source:
 
 build:
   noarch: python
-  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
@@ -61,3 +61,4 @@ extra:
     - fbdtemme
     - bdpedigo
     - ambarrio
+    - jan-janssen

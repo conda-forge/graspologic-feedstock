@@ -146,5 +146,6 @@ Feedstock Maintainers
 * [@ambarrio](https://github.com/ambarrio/)
 * [@bdpedigo](https://github.com/bdpedigo/)
 * [@fbdtemme](https://github.com/fbdtemme/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@johandahlberg](https://github.com/johandahlberg/)
 
