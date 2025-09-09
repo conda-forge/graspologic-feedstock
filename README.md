@@ -3,11 +3,11 @@ About graspologic-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/graspologic-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/microsoft/graspologic
+Home: https://github.com/graspologic-org/graspologic
 
 Package license: MIT
 
-Summary: A set of python modules for graph statistics
+Summary: A set of Python modules for graph statistics
 
 Current build status
 ====================
