@@ -1,13 +1,13 @@
 {% set name = "graspologic" %}
-{% set version = "3.4.1" %}
+{% set version = "3.4.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/graspologic-{{ version }}.tar.gz
-  sha256: 7561f0b852a2bccd351bff77e8db07d9892f9dfa35a420fdec01690e4fdc8075
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/graspologic-{{ version }}.tar.gz
+  sha256: 79878caf367da3e89046a4ec94291c5b1a5da569f19fdd879d8b45c3563d7110
 
 build:
   noarch: python
