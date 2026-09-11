@@ -1,13 +1,13 @@
 {% set name = "graspologic" %}
-{% set version = "3.4.1" %}
+{% set version = "3.4.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/graspologic-{{ version }}.tar.gz
-  sha256: 7561f0b852a2bccd351bff77e8db07d9892f9dfa35a420fdec01690e4fdc8075
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/graspologic-{{ version }}.tar.gz
+  sha256: 79878caf367da3e89046a4ec94291c5b1a5da569f19fdd879d8b45c3563d7110
 
 build:
   noarch: python
@@ -16,17 +16,18 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<3.13
+    - python {{ python_min }}
+    - pip
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning >=1.0.0,<2.0.0
-    - pip
   run:
-    - python >=3.9.0,<4.0.0,<3.13
+    - python >={{ python_min }}
     - anytree >=2.12.1,<3.0.0
     - beartype >=0.18.5,<0.19.0
-    - gensim >=4.3.2,<5.0.0
+    - future >=1.0.0,<2.0.0
+    - gensim >=4.3.3,<5.0.0
     - graspologic-native >=1.2.1,<2.0.0
-    - hyppo >=0.4.0,<0.5.0
+    - hyppo >=0.5.2,<0.6.0
     - joblib >=1.4.2,<2.0.0
     - matplotlib-base >=3.8.4,<4.0.0
     - networkx >=3.0.0,<4.0.0
@@ -34,7 +35,7 @@ requirements:
     - pot >=0.9.0,<0.10.0
     - seaborn >=0.13.2,<0.14.0
     - scikit-learn >=1.4.2,<2.0.0
-    - scipy 1.12.0
+    - scipy >=1.12.0,<2.0.0
     - statsmodels >=0.14.2,<0.15.0
     - typing-extensions >=4.4.0,<5.0.0
     - umap-learn >=0.5.6,<0.6.0
@@ -43,10 +44,11 @@ test:
   imports:
     - graspologic
     - graspologic.partition.leiden
-  commands:
-    - pip check
   requires:
     - pip
+    - python {{ python_min }}
+  commands:
+    - pip check
 
 about:
   home: https://github.com/graspologic-org/graspologic
